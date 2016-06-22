@@ -29,11 +29,11 @@ $table = "courses";
     }
 
     .stylish-input-group .input-group-addon{
-        background: white !important; 
+        background: white !important;
     }
     .stylish-input-group .form-control{
-        border-right:0; 
-        box-shadow:0 0 0; 
+        border-right:0;
+        box-shadow:0 0 0;
         border-color:#ccc;
     }
     .stylish-input-group button{
@@ -42,21 +42,21 @@ $table = "courses";
     }
     body{
         background-color:#E6E6FA;
-    } 
+    }
     div.cards{
       width:150px;
       height: 100px;
       margin-left: 150px;
       margin-top: 20px;
       display:inline-block;
-      
+
     }
     .w3-card-4{
       background-color:#90EE90;
     }
-  
-    
-    
+
+
+
     </style>
     <script type="text/javascript">
     $(function(){
@@ -69,7 +69,7 @@ $table = "courses";
             $('#logout').css('display','block');
             $('#profile').css('display','block');
             $('#login').css('display','none');";
-          }            
+          }
         ?>
         $("#head").click(function(){
           window.location.href="/miniproject/"
@@ -85,7 +85,7 @@ $table = "courses";
           $("#login").click(function(){
             window.location.href="/miniproject/formpage.php";
             });
-      
+
         $("#logout").click(function(){<?php session_destroy();?>
         $(this).css('display','none');
         $("#profile").css('display','none');
@@ -96,7 +96,14 @@ $table = "courses";
         var name = $(this).data().name;
         window.location.href="/miniproject/videopage.php?s="+name+"";
       });
-    
+
+   });
+   $(function(){
+       $("#search_field").keyup(function(){
+
+           var str = $(this).val();
+           livesearch(str);
+       });
    });
     </script>
     <?php
@@ -119,7 +126,7 @@ if(mysqli_num_rows($result) > 0){
           $('.xcontainer').append(\"<div data-name=\\\"".$row['Courses_Name']."\\\" class=\\\"cards w3-card-4\\\"><center><strong><p>".$row['Courses_Name']."</p></strong></center></div>\");
           });
           </script>";
-          
+
     echo $issue;
   }
 }
@@ -143,26 +150,27 @@ mysqli_close($conn);
         <img style="width:100%; height:400px" src="Bitmap.png">
         <div class="container" style="position:absolute; top:300px">
             <div class="row">
-                 
+
                 <div class="col-sm-6 col-sm-offset-3">
-                    <div id="imaginary_container"> 
+                    <div id="imaginary_container">
                         <div class="input-group stylish-input-group">
-                           
-                            <input id="search_field"  type="text" class="form-control"  placeholder="Search" >
+
+                            <input id="search_field"  type="text" class="form-control" placeholder="Search" >
                             <span class="input-group-addon">
                                 <button  type="submit" id="search" style="align:center;" data-toggle="modal" data-target="#myModal">
                                     <span class="glyphicon glyphicon-search"></span>
-                                </button>  
+                                </button>
                             </span>
 
                         </div>
                     </div>
                 </div>
-            
+
             </div>
         </div>
 
     </div>
+    <p id="search-output"></p>
    <div id="myModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
 
@@ -173,7 +181,7 @@ mysqli_close($conn);
         <h4 class="modal-title">Search Results</h4>
       </div>
       <div id="modal-body" class="modal-body">
-        
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

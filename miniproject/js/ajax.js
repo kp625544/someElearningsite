@@ -1,6 +1,6 @@
 var xmlHttp = createXmlHttpRequestObject();
 
-	
+
 
 function createXmlHttpRequestObject(){
 	var xmlHttp;
@@ -24,10 +24,10 @@ function process(str){
 			if(xmlHttp.status==200){
 			try{
 			text = xmlHttp.responseText;
-			
+
 			display = document.getElementById('display');
 			if(text=="no"){
-				
+
 				display.className="glyphicon glyphicon-ok"
 				display.innerHTML=" Username is Available :)"
 			}
@@ -36,7 +36,7 @@ function process(str){
 				display.innerHTML=" Username is Not Available :("
 			}
 
-			
+
 		}
 
 		catch(e){
@@ -67,15 +67,15 @@ function thephotothing(str){
 			if(xmlHttp.status==200){
 			try{
 			text = xmlHttp.responseText;
-			
+
 			display = document.getElementById('profilepic');
 			if(text!="NULL"){
 				display.setAttribute('src',text);
 			}
-			
-			
 
-			
+
+
+
 		}
 
 		catch(e){
@@ -106,16 +106,60 @@ function search(str){
 			if(xmlHttp.status==200){
 			try{
 			text = xmlHttp.responseText;
-			
+
 			display = document.getElementById('modal-body');
 			if(text!="NULL"){
 				alert(text);
 				display.innerHTML+=text;
 			}
-			
-			
 
-			
+
+
+
+		}
+
+		catch(e){
+			alert(e.toString());
+		}
+		}else{
+			alert(xmlHttp.statusText);
+		}
+	}
+
+}
+;
+			xmlHttp.send(null);
+		}
+
+		catch(e){
+			alert(e.toString());
+		}
+	}
+}
+
+
+
+
+function livesearch(str){
+	if(xmlHttp){
+		try{
+			alert(str);
+			xmlHttp.open("GET","http://localhost/miniproject/search.php?s=" +str,true);
+			xmlHttp.onreadystatechange = function(){
+			if(xmlHttp.readyState==4){
+			if(xmlHttp.status==200){
+			try{
+			text = xmlHttp.responseText;
+
+			display = document.getElementById('search-output');
+			if(text!="NULL"){
+				alert(text);
+				display.innerHTML+=text;
+			}
+
+
+
+
 		}
 
 		catch(e){
