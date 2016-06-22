@@ -19,21 +19,21 @@
     <script type="text/javascript">
         $(function(){
             $("#regusername").keyup(function(){
-                
+
                 var str = $(this).val();
                 process(str);
             });
         });
         $(function(){
             $("#username").focusout(function(){
-                
+
                 var str = $(this).val();
-                
+
                 thephotothing(str);
             });
         });
 
-        
+
     </script>
 
     <style type="text/css">
@@ -66,13 +66,13 @@ height:115px
 }
             body{
             background-color:#E6E6FA;
-            }           
+            }
             .container-fluid{
             background-image: linear-gradient(90deg, #4b6cb7, #182848);
             position: absolute;
             width:100%;
             top:0px;
-            } 
+            }
             .container{
                 position: absolute;
                 top:150px;
@@ -83,7 +83,7 @@ height:115px
 <body>
     <div class="container-fluid" style="height:100px ">
             <div>
-                <h1 class="col-sm-6 col-lg-9" style="top:25%"><strong><em>Coursecademy</strong></em></h1>
+              <a href="index.php">  <h1 class="col-sm-6 col-lg-9" style="top:25%"><strong><em>Coursecademy</strong></em></h1></a>
             </div>
             <div class="col-sm-6 col-lg-3" style="position:relative; top:25%; right:5%;">
 
@@ -120,7 +120,7 @@ height:115px
                                     <div class="form-group">
                                         <input type="password" name="loginpassword" id="password" tabindex="2" class="form-control" placeholder="Password">
                                     </div>
-                                    
+
                                     <div class="form-group">
                                         <div class="row">
                                             <div class="col-sm-6 col-sm-offset-3">
@@ -128,10 +128,10 @@ height:115px
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                 </form>
                                 <form id="register-form" enctype="multipart/form-data" action="register.php" method="post" role="form" style="display: none;" onsubmit= "return checkForm(this)";>
-                                    
+
                                     <div class="form-group">
                                         <input type="text" name="username" id="regusername" tabindex="1" class="form-control" placeholder="Username" value=""><span id="display" class="glyphicon "></span>
                                     </div>

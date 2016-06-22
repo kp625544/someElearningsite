@@ -203,7 +203,7 @@ mysqli_close($conn);
                     <center>
                       <img src="http://oi60.tinypic.com/w8lycl.jpg" class="img-circle" alt="the-brains">
                       <br>
-                      <h4 class="footertext">Rohit Jaisinghani</h4>
+                      <h4 class="footertext">Kaushal Parikh</h4>
                   </center>
               </div>
               <div class="col-md-4">

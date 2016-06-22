@@ -50,19 +50,19 @@ iframe{
 
     body{
         background-color:#E6E6FA;
-    } 
+    }
 </style>
 </head>
 <body>
 
 	<div class="container-fluid" style=" position:absolute; top:0px; height:100px; width=100%;">
         <div>
-            <h1 class="col-sm-12 col-lg-6" style="top:25%; height:40px; width=300px;"><strong><em>Coursecademy</strong></em></h1>
+            <a href="index.php"><h1 class="col-sm-12 col-lg-6" style="top:25%; height:40px; width=300px;"><strong><em>Coursecademy</strong></em></h1></a>
         </div>
         <div class="col-sm-12 col-lg-6" style="position:relative; top:25%; right:5%;">
             <button id="logout" type="button" style="margin-right:10px;margin-left:10px; float:right; display:none;" class="btn btn-lg btn-danger">Log Out</button>
             <button id="profile" type="button" style=" float:right; display:none;" class="btn btn-lg btn-warning">Profile</button>
-            <button id="login" type="button" style=" float:right; " class="btn btn-lg btn-success">Login</button>
+            <a href="formpage.php"<button id="login" type="button" style=" float:right; " class="btn btn-lg btn-success">Login</button></a>
             <button id="Courses" type="button" style=" float:right; margin-right:10px " class="btn btn-lg btn-success">Courses</button>
         </div>
     </div>

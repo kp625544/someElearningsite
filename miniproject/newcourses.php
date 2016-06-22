@@ -1,14 +1,14 @@
 
 <html>
 <head>
-	
-	
+
+
 	<title></title>
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-	
+
 	<style type="text/css">
 	.container-fluid{
 		background-image: linear-gradient(90deg, #4b6cb7, #182848);
@@ -22,7 +22,7 @@
   		margin-left: 150px;
   		margin-top: 20px;
   		display:inline-block;
-  		
+
   	}
   	.w3-card-4{
   		background-color:#90EE90;
@@ -49,7 +49,7 @@ if(mysqli_num_rows($result) > 0){
 					$('#NotLive').append(\"<div data-name=\\\"".$row['Courses_Name']."\\\" class=\\\"cards w3-card-4 notlive\\\"><center><strong><p>".$row['Courses_Name']."</p></strong></center></div>\");
 					});
 					</script>";
-					
+
 		echo $issue;
 	}
 }
@@ -62,7 +62,7 @@ if(mysqli_num_rows($result_2) > 0){
 					$('#Live').append(\"<div class=\\\"cards w3-card-4 live\\\"><center><strong><p>".$row_2['Courses_Name']."</p></strong></center></div>\");
 					});
 					</script>";
-					
+
 		echo $issue_2;
 	}
 }
@@ -80,7 +80,7 @@ mysqli_close($conn);
 			alert();
 				var name = $(this).data().name;
 				window.location.href="/miniproject/theultimatepage.php";
-			});		
+			});
 		});
 	</script>
 
@@ -88,7 +88,7 @@ mysqli_close($conn);
 	<body>
 		<div class="container-fluid" style="height:100px ">
 			<div>
-				<h1 class="col-sm-12 col-lg-9" style="top:30%"><strong><em></strong></em></h1>
+				<a href="index.php"><h1 class="col-sm-12 col-lg-9" style="top:30%"><strong><em>Coursecademy</strong></em></h1></a>
 			</div>
 			<div class="col-sm-12 col-lg-3" style="position:relative; top:25%; right:5%;">
 
@@ -97,18 +97,18 @@ mysqli_close($conn);
 				<button type="button" style=" float:right; margin-right:10px " class="btn btn-lg btn-success">Courses</button>
 			</div>
 		</div>
-		
+
 		<div align="container-fluid" id="NotLive" style="position:relative; width:100%;">
 				<h3 align="center">Non Live Courses</h3>
-				
-			
-			
+
+
+
 		</div>
 		<div align="container-fluid" id="Live" style="position:relative; width:100%;">
 				<h3 align="center">Live Courses</h3>
-			
+
 		</div>
-		
+
 	</body>
-	
+
 	</html>
