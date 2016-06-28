@@ -86,11 +86,11 @@ $table = "courses";
             window.location.href="/miniproject/formpage.php";
             });
 
-        $("#logout").click(function(){<?php session_destroy();?>
+        $("#logout").click(function(){
         $(this).css('display','none');
         $("#profile").css('display','none');
         $("#login").css('display','block');
-        window.location.href="/miniproject/";
+        window.location.href="/miniproject/logout.php";
         });
         $(".cards").click(function(){
         var name = $(this).data().name;
